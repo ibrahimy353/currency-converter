@@ -1,13 +1,19 @@
+import React from 'react';
 import './App.css';
+import CurrencyRow from './CurrencyRow';
 
 function App() {
   return (
-    <div className="App">
-      <header>
-          Learn React even more
-        
-      </header>
-    </div>
+
+      <>
+      <h1>Currency Convertor</h1>
+      <CurrencyRow />
+      <div>
+        =
+      </div>
+      <CurrencyRow />
+      </> 
+  
   );
 }
 
