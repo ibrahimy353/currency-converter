@@ -7,8 +7,8 @@ const BASE_URL = 'https://v6.exchangerate-api.com/v6/bae7ff234eccef6ead0e40bb/la
 function App() {
   const [currencyOptions, setCurrencyOptions] = useState([])
   console.log(currencyOptions)
-  useEffect (() =>{
 
+  useEffect (() =>{
     fetch(BASE_URL)
     .then( res => res.json())
     .then(data =>{
