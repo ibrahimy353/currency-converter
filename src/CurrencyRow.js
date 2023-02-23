@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function CurrencyRow( props) {
+export default function CurrencyRow( properties) {
     const {
         currencyOptions
-    } = props
+    } = properties
   return (
     <div>
         <input type="number" className='input' />
