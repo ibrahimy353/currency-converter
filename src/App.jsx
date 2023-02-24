@@ -9,11 +9,11 @@ function App() {
 
   return (
 <Container maxWidth='md' sx={{background:'#fdfdfd'}}>
-    <Typography variant='h5' sx={{marginTop:'2rem'}}>
+    <Typography variant='h5' sx={{marginBottom:'2rem'}}>
       Get the Accurate Conversion Stop Guessing!!
     </Typography>
 
-    <Grid Container spacing={2}>
+    <Grid container spacing={2} >
       <InputAmount />
       <SelectCountry />
       <SwitchCurrency />
