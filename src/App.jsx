@@ -13,7 +13,7 @@ function App() {
     minHeight: '20rem',
     borderRadius: 2,
     padding: '4rem 2rem',
-    boxShadow: '0px 10px 15px -3px rgba(0,0,0,0.1)',
+    boxShadow: '0px 10px 15px -3px rgba(0,0,0,0.5)',
     position: 'relative'
   }
 
