@@ -18,18 +18,14 @@ function App() {
   }, [])
 
   return (
-      <>
+    <>
       <h1>Currency Convertor</h1>
-      <CurrencyRow
-      currencyOptions={currencyOptions}/>
-      <div className='equals'>
-        =
-      </div>
-      <CurrencyRow 
-      currencyOptions={currencyOptions}/>
-      
-      </> 
-  
+        <CurrencyRow currencyOptions = {currencyOptions} />
+          <div className='equals'>
+            =
+          </div>
+        <CurrencyRow currencyOptions = {currencyOptions} />
+    </> 
   );
 }
 
