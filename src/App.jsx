@@ -8,9 +8,9 @@ function App() {
 
 
   return (
-<Container maxWidth='md' sx={{background:'#2227'}}>
+<Container maxWidth='md' sx={{background:'#fdfdfd'}}>
     <Typography variant='h5' sx={{marginTop:'2rem'}}>
-      Keep it going Ibra
+      Get the Accurate Conversion Stop Guessing!!
     </Typography>
 
     <Grid Container spacing={2}>
