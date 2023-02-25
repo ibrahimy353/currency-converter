@@ -32,7 +32,7 @@ const App = () => {
           currencies:codeToCurrency
         }
       })
-      .then(response => setResultCurrency(response.data.data["KES"]))
+      .then(response => setResultCurrency(response.data.data["codeToCurrency"]))
       .catch(error => console.log(error))
     }
 
