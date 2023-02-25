@@ -1,4 +1,4 @@
-import {Box, Container, Grid, Typography } from '@mui/material'
+import { Box, Container, Grid, Link, Typography } from '@mui/material'
 import axios from 'axios'
 import { useContext, useEffect, useState } from 'react'
 import InputAmount from './components/InputAmount'
@@ -6,21 +6,18 @@ import SelectCountry from './components/SelectCountry'
 import SwitchCurrency from './components/SwitchCurrency'
 import { CurrencyContext } from './context/CurrencyContext'
 
+  function App() {
+    const {
+      fromCurrency,
+      setFromCurrency,
+      toCurrency,
+      setToCurrency,
+      firstAmount,
+    } = useContext(CurrencyContext);
+    const [resultCurrency, setResultCurrency] = useState(0);
+    const codeFromCurrency = fromCurrency.split(" ")[1];
+    const codeToCurrency = toCurrency.split(" ")[1];
 
-const App = () => {
-
-  const {
-    fromCurrency,
-    setFromCurrency,
-    toCurrency,
-    setToCurrency,
-    firstAmount,
-  } = useContext(CurrencyContext)
-
-  const [resultCurrency, setResultCurrency] = useState(0);
-  const codeFromCurrency = fromCurrency.split (" ")[1];
-  const codeToCurrency = toCurrency.split (" ")[1];
-  console.log(resultCurrency)
   
   
   useEffect(() =>{
@@ -32,11 +29,10 @@ const App = () => {
           currencies:codeToCurrency
         }
       })
-      .then(response => setResultCurrency(response.data.data["codeToCurrency"]))
+      .then(response => setResultCurrency(response.data.data[codeToCurrency]))
       .catch(error => console.log(error))
-    }
-
-  }, [firstAmount, fromCurrency, toCurrency])
+  }
+}, [firstAmount, fromCurrency, toCurrency])
 
   const boxStyle ={
     background: '#fdfdfd',
@@ -56,25 +52,23 @@ const App = () => {
       Get the Accurate Conversion Stop Guessing!!
     </Typography>
 
-    <Grid container spacing={2} >
-      <InputAmount />
-      <SelectCountry value={fromCurrency} setValue={setFromCurrency} label='from'/>
-      <SwitchCurrency />
-      <SelectCountry value={toCurrency} setValue={setToCurrency} label='To'/>
+    <Grid container spacing={2}>
+        <InputAmount />
+        <SelectCountry value={fromCurrency} setValue={setFromCurrency} label="From" />
+        <SwitchCurrency />
+        <SelectCountry value={toCurrency} setValue={setToCurrency} label="To" />
+      </Grid>
 
-    </Grid>
-    {firstAmount?(
-      <Box sx={{textAlign:'left', marginTop:'1rem'}}>
-        <Typography>
-          {firstAmount}{fromCurrency}=
-        </Typography>
-
-        <Typography variant='h4' sx={{marginTop:'5px', fontweight:'bold'}}>
-          {resultCurrency*firstAmount} {toCurrency}
-        </Typography>
-      </Box>
-
-    ): ""}
+      {firstAmount ? (
+        <Box sx={{ textAlign: "left", marginTop: "1rem"}}>
+          <Typography>
+            {firstAmount} {fromCurrency} =
+          </Typography>
+          <Typography variant='h5' sx={{ marginTop: "5px", fontWeight: "bold"}}>
+            {resultCurrency*firstAmount} {toCurrency}
+          </Typography>
+        </Box>
+      ) : ""}
 </Container>     
     
   )
