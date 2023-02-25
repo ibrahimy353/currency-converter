@@ -21,7 +21,7 @@ function SelectCountry  (props)  {
     const dataCountries = dataFilter.map(item =>{
         return `${item.flag} ${Object.keys(item.currencies)[0]}-${item.name.common}`
     });
-
+   
   return (
     <Grid item xs='12' md={3}>
         <Autocomplete
