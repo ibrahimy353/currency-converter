@@ -1,27 +1,24 @@
 import { Grid, InputAdornment, TextField } from "@mui/material"
-import e from "cors";
 import { useContext } from "react"
 import { CurrencyContext } from "../context/CurrencyContext"
 
-function InputAmount() {
-
-    const { firstAmount, setFirstAmount} = useContext(CurrencyContext);
+const InputAmount = () => {
+  const { firstAmount, setFirstAmount} = useContext(CurrencyContext);
 
   return (
-    <Grid item xs='12' md> 
-    {/* median md gets to fill the available space thus being responsiveIbra */}
-        <TextField 
-        value= {firstAmount}
-        onChange= {e=>setFirstAmount(e.target.value)}
-        label='Amount'
+    <Grid item xs={12} md>
+      <TextField
+        value={firstAmount}
+        onChange={e => setFirstAmount(e.target.value)}
+        label="Amount"
         fullWidth
         InputProps={{
-            type: 'number',
-            startAdornment: <InputAdornment position='start'> $ </InputAdornment>
+          type: "number",
+          startAdornment: <InputAdornment position="start">$</InputAdornment>
         }}
-        />
+      />
     </Grid>
-    )
+  )
 }
 
 export default InputAmount
