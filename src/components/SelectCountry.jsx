@@ -1,7 +1,8 @@
 import { Autocomplete, Grid, Skeleton, TextField } from "@mui/material"
 import useAxios from "../hooks/useAxios"
 
-function SelectCountry() {
+function SelectCountry  (props)  {
+    const {value, setValue, label} = props;
     const [data, loaded, error] = useAxios("https://restcountries.com/v3.1/all");
 
     if (loaded) {
@@ -26,7 +27,7 @@ function SelectCountry() {
         <Autocomplete
             value='option1'
             options={dataCountries}
-            renderInput={(params) => <TextField {...params} label='from'/>}
+            renderInput={(params) => <TextField {...params} label={label}/>}
         />
             
     </Grid>

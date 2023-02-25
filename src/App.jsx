@@ -1,10 +1,14 @@
 import { Button, Container, Grid, Typography } from '@mui/material'
+import { useState } from 'react'
 import InputAmount from './components/InputAmount'
 import SelectCountry from './components/SelectCountry'
 import SwitchCurrency from './components/SwitchCurrency'
 
 
 function App() {
+  const [ fromCurrency, setFromCurrency] = useState('');
+  const [ toCurrency, setToCurrency] = useState('');
+
   const boxStyle ={
     background: '#fdfdfd',
     marginTop: '10%',
@@ -25,9 +29,9 @@ function App() {
 
     <Grid container spacing={2} >
       <InputAmount />
-      <SelectCountry />
+      <SelectCountry value={fromCurrency} setValue={setFromCurrency} label='from'/>
       <SwitchCurrency />
-      <SelectCountry />
+      <SelectCountry value={toCurrency} setValue={setToCurrency} label='To'/>
 
     </Grid>
 </Container>     
