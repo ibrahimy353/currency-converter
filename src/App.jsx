@@ -1,13 +1,19 @@
-import { Button, Container, Grid, Typography } from '@mui/material'
-import { useState } from 'react'
+import {Container, Grid, Typography } from '@mui/material'
+import { useContext } from 'react'
 import InputAmount from './components/InputAmount'
 import SelectCountry from './components/SelectCountry'
 import SwitchCurrency from './components/SwitchCurrency'
+import { CurrencyContext } from './context/CurrencyContext'
 
 
 function App() {
-  const [ fromCurrency, setFromCurrency] = useState('');
-  const [ toCurrency, setToCurrency] = useState('');
+
+  const {
+    fromCurrency,
+    setFromCurrency,
+    toCurrency,
+    setToCurrency
+  } = useContext(CurrencyContext)
 
   const boxStyle ={
     background: '#fdfdfd',
