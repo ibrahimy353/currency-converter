@@ -25,7 +25,12 @@ function SelectCountry  (props)  {
   return (
     <Grid item xs='12' md={3}>
         <Autocomplete
-            value='option1'
+            value={value}
+            onChange={(event, newValue) =>{ 
+                //gets to hold on to the value of the chosen currency from one country TO another one on different boxes
+                setValue(newValue);
+            }}
+            
             options={dataCountries}
             renderInput={(params) => <TextField {...params} label={label}/>}
         />
