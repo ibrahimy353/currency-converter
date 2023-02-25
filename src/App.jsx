@@ -1,5 +1,6 @@
 import {Container, Grid, Typography } from '@mui/material'
-import { useContext, useEffect } from 'react'
+import axios from 'axios'
+import { useContext, useEffect, useState } from 'react'
 import InputAmount from './components/InputAmount'
 import SelectCountry from './components/SelectCountry'
 import SwitchCurrency from './components/SwitchCurrency'
@@ -16,10 +17,22 @@ function App() {
     firstAmount,
     setFirstAmount
   } = useContext(CurrencyContext)
-
+  const [resultCurrency, setResultCurrency] = useState(0);
+console.log(resultCurrency)
   useEffect(() =>{
+    if(firstAmount){
+      axios("https://api.freecurrencyapi.com/v1/latest", {
+        params: {
+          apikey:"IASMeyaNlt3MTGtCuVCheP267BVXqCEAWB3OFSOR",
+          base_currency: "USD",
+          currencies:"EUR"
+        }
+      })
+      .then(response => setResultCurrency(response.data))
+      .catch(error => console.log(error))
+    }
 
-  }, [])
+  }, [firstAmount])
 
   const boxStyle ={
     background: '#fdfdfd',
