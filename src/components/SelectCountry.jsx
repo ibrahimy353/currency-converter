@@ -36,7 +36,7 @@ function SelectCountry  (props)  {
         />
             
     </Grid>
-    )
+    );
 }
 
 export default SelectCountry
