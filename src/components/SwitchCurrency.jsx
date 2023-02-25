@@ -3,12 +3,12 @@ import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
 import { useContext } from "react";
 import { CurrencyContext } from "../context/CurrencyContext";
 
-function SwitchCurrency() {
+const SwitchCurrency = () => {
     const {
-        fromCurrency,
-        setFromCurrency,
-        toCurrency,
-        setToCurrency
+      fromCurrency,
+      setFromCurrency,
+      toCurrency,
+      setToCurrency
     } = useContext(CurrencyContext)
 
     const handleSwitch = () =>{
