@@ -1,5 +1,5 @@
 import {Container, Grid, Typography } from '@mui/material'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import InputAmount from './components/InputAmount'
 import SelectCountry from './components/SelectCountry'
 import SwitchCurrency from './components/SwitchCurrency'
@@ -12,8 +12,14 @@ function App() {
     fromCurrency,
     setFromCurrency,
     toCurrency,
-    setToCurrency
+    setToCurrency,
+    firstAmount,
+    setFirstAmount
   } = useContext(CurrencyContext)
+
+  useEffect(() =>{
+
+  }, [])
 
   const boxStyle ={
     background: '#fdfdfd',
