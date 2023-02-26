@@ -22,9 +22,9 @@ import { CurrencyContext } from './context/CurrencyContext'
   
   useEffect(() =>{
     if(firstAmount){
-      axios("https://api.freecurrencyapi.com/v1/latest", {
+      axios("https://api.apilayer.com/exchangerates_data/live?base=USD&symbols=EUR,GBP", {
         params: {
-          apikey:"IASMeyaNlt3MTGtCuVCheP267BVXqCEAWB3OFSOR",
+          apikey:"epiiTP18RsyipRydCcRL9QchehcwqtGk",
           base_currency:codeFromCurrency,
           currencies:codeToCurrency
         }
