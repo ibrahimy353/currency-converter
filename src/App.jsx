@@ -62,7 +62,7 @@ import { CurrencyContext } from './context/CurrencyContext'
       {firstAmount ? (
         <Box sx={{ textAlign: "left", marginTop: "1rem"}}>
           <Typography>
-            {firstAmount} {fromCurrency} =
+            {firstAmount*fromCurrency} {fromCurrency} =
           </Typography>
           <Typography variant='h5' sx={{ marginTop: "5px", fontWeight: "bold"}}>
             {resultCurrency*firstAmount} {toCurrency}
