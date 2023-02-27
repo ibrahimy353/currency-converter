@@ -14,7 +14,7 @@ function SelectCountry  (props)  {
     }
    
     if (error){
-        return 'something went wrong!!'
+        return 'something went wrong!'
     }
 
     const dataFilter = data.filter(item => " currencies " in item);
