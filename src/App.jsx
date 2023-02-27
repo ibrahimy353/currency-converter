@@ -49,7 +49,7 @@ import { CurrencyContext } from './context/CurrencyContext'
   return (
 <Container maxWidth='md' sx={boxStyle}>
     <Typography variant='h5' sx={{marginBottom:'2rem'}}>
-      Get the Accurate Conversion Stop Guessing!!
+      Stop Guessing Get the Accurate Conversion !!
     </Typography>
 
     <Grid container spacing={2.5}>
