@@ -29,7 +29,7 @@ import { CurrencyContext } from './context/CurrencyContext'
           currencies:codeToCurrency
         }
       })
-      .then(response => setResultCurrency(response.data.data[codeToCurrency]))
+      .then(response => setResultCurrency (response.data.data[codeToCurrency]))
       .catch(error => console.log(error))
   }
 }, [firstAmount, fromCurrency, toCurrency])
@@ -52,7 +52,7 @@ import { CurrencyContext } from './context/CurrencyContext'
       Get the Accurate Conversion Stop Guessing!!
     </Typography>
 
-    <Grid container spacing={2}>
+    <Grid container spacing={2.5}>
         <InputAmount />
         <SelectCountry value={fromCurrency} setValue={setFromCurrency} label="From" />
         <SwitchCurrency />
