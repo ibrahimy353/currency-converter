@@ -22,13 +22,23 @@ import { CurrencyContext } from './context/CurrencyContext'
   
   useEffect(() =>{
     if(firstAmount){
-      axios.get("https://api.freecurrencyapi.com/v1/latest", {
+      // axios.get("https://api.freecurrencyapi.com/v1/latest", {
+      //   params: {
+      //     apikey: "IASMeyaNlt3MTGtCuVCheP267BVXqCEAWB3OFSOR",
+      //     base_currency:codeFromCurrency,
+      //     currencies:codeToCurrency
+      //   }
+      // })
+      axios({
+        method: 'GET',
+        url: 'https://api.freecurrencyapi.com/v1/latest',
         params: {
           apikey: "IASMeyaNlt3MTGtCuVCheP267BVXqCEAWB3OFSOR",
-          base_currency:codeFromCurrency,
-          currencies:codeToCurrency
+          base_currency: codeFromCurrency,
+          currencies: codeToCurrency
         }
       })
+      
       .then(response => setResultCurrency (response.data.data[codeToCurrency]))
       .catch(error => console.log(error))
   }
