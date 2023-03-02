@@ -22,7 +22,7 @@ import { CurrencyContext } from './context/CurrencyContext'
   
   useEffect(() =>{
     if(firstAmount){
-      axios("https://api.freecurrencyapi.com/v1/latest?", {
+      axios.get("https://api.freecurrencyapi.com/v1/latest", {
         params: {
           apikey: "IASMeyaNlt3MTGtCuVCheP267BVXqCEAWB3OFSOR",
           base_currency:codeFromCurrency,
