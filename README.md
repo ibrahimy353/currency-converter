@@ -88,6 +88,7 @@ To deploy this project and share with friends. after editing to your desire, get
 
 Contributions are always welcome!
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+<<<<<<< HEAD
 # Karensi-Ex (Exchange)
 
 Karensi-ex is a simple currency converter website built using React.js, Vite, and Material UI. The website allows users to convert one currency to another and provides real-time exchange rate data using the Free Currency API.
@@ -178,3 +179,5 @@ To deploy this project and share with friends. after editing to your desire, get
 
 Contributions are always welcome!
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+=======
+>>>>>>> cf2aa565905a3f40906627424194c2409cc2ba01
