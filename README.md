@@ -1,8 +1,8 @@
-![currency](https://user-images.githubusercontent.com/85551204/222786351-e8179c30-07b7-4eb1-b944-be471a273b5c.JPG)
-
 # Karensi-Ex (Exchange)
 
 Karensi-ex is a simple currency converter website built using React.js, Vite, and Material UI. The website allows users to convert one currency to another and provides real-time exchange rate data using the Free Currency API.
+![currency](https://user-images.githubusercontent.com/85551204/222786351-e8179c30-07b7-4eb1-b944-be471a273b5c.JPG)
+
 ## Authors
 
 - [@ibrahimy353](https://ibrahim-yusuf.netlify.app)
