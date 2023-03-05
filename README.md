@@ -89,26 +89,6 @@ To deploy this project and share with friends. after editing to your desire, get
 Contributions are always welcome!
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 <<<<<<< HEAD
-# Karensi-Ex (Exchange)
-
-Karensi-ex is a simple currency converter website built using React.js, Vite, and Material UI. The website allows users to convert one currency to another and provides real-time exchange rate data using the Free Currency API.
-![currency](https://user-images.githubusercontent.com/85551204/222786351-e8179c30-07b7-4eb1-b944-be471a273b5c.JPG)
-
-## Authors
-
-- [@ibrahimy353](https://ibrahim-yusuf.netlify.app)
-
-
-## Features To be expected in the Demo website 
-
-- Select from and to currencies using dropdown menus.
-- Enter the amount to convert and get the converted amount instantly.
-- Real-time exchange rate data fetched from Free Currency API.
-- Switch between the two currencies using a switch button.
-- Observe the background as it changes the background color shifting.
-- Built with React.js, Vite, and Material UI.
-
-## Demo Link To the Site I created.
 
 site link: https://currency-converter-react-js.vercel.app/
 
@@ -179,5 +159,4 @@ To deploy this project and share with friends. after editing to your desire, get
 
 Contributions are always welcome!
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-=======
->>>>>>> cf2aa565905a3f40906627424194c2409cc2ba01
+
